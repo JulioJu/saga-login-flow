@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux'
 import Form from './common/Form'
 
@@ -33,9 +34,9 @@ class Login extends Component {
 }
 
 Login.propTypes = {
-  data: React.PropTypes.object,
-  history: React.PropTypes.object,
-  dispatch: React.PropTypes.func
+  data: PropTypes.object,
+  history: PropTypes.object,
+  dispatch: PropTypes.func
 }
 
 // Which props do we want to inject, given the global state?

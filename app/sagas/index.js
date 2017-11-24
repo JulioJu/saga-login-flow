@@ -6,7 +6,7 @@
 
 import {hashSync} from 'bcryptjs'
 import genSalt from '../auth/salt'
-import {browserHistory} from 'react-router'
+import history from '../history'
 import {take, call, put, fork, race} from 'redux-saga/effects'
 import auth from '../auth'
 
@@ -159,5 +159,5 @@ export default function * root () {
 
 // Little helper function to abstract going to different pages
 function forwardTo (location) {
-  browserHistory.push(location)
+  history.push(location)
 }

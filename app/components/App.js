@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux'
 import Nav from './common/Nav'
 
 class App extends Component {
   render () {
     return (
-      <div className='wrapper'>
+      <div>
         <Nav loggedIn={this.props.data.loggedIn}
           currentlySending={this.props.data.currentlySending}
           history={this.props.history}
@@ -18,11 +19,11 @@ class App extends Component {
 }
 
 App.propTypes = {
-  data: React.PropTypes.object,
-  history: React.PropTypes.object,
-  location: React.PropTypes.object,
-  children: React.PropTypes.object,
-  dispatch: React.PropTypes.func
+  data: PropTypes.object,
+  history: PropTypes.object,
+  location: PropTypes.object,
+  children: PropTypes.object,
+  dispatch: PropTypes.func
 }
 
 function select (state) {
